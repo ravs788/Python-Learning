@@ -22,4 +22,11 @@ print(p.findall("he said *** in some_language."))
 p = re.compile('ab*') 
 print(p.findall("ababbaabbb")) 
 
-print(re.split("\W+","He said * in some_lang."))
+print(re.split("\+","He said * in some_lang."))
+
+print(re.sub("[aA]","@","He said * in some_lang."))
+print(re.subn("[aA]","@","He said * in some_lang."))
+t = re.sub("[aA]","@","He said * in some_lang.")
+print("\n",t," ",len(t)," ",t[0])
+
+print(re.escape("I Asked what is this [a-9], he said \t ^WoW")) 
